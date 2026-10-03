@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dženisa & Omar | Vjenčanje</title>
+  <link rel="icon" type="image/x-icon" href="farzadlawcom_210707856.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button id="backToTop" title="Nazad na vrh"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- <div class="music-wrapper" onclick="toggleMusic()">
+    <span id="musicText">Pusti muziku</span>
+    <div class="music-icon"><i id="musicIcon" class="fas fa-play"></i></div>
+    <audio id="bgMusic" loop>
+      <source src="Ženim Se.mp3" type="audio/mpeg">
+    </audio>
+  </div> -->
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2 class="subtitle">Sačuvaj datum</h2>
+      <h1>Dženisa <span>&</span> Omar</h1>
+      <p class="date">10. Oktobar 2026 • Sarajevo</p>
+      
+      <div id="countdown">
+        <div class="time-box"><span id="days">00</span><small>Dana</small></div>
+        <div class="time-box"><span id="hours">00</span><small>Sati</small></div>
+        <div class="time-box"><span id="minutes">00</span><small>Minuta</small></div>
+        <div class="time-box"><span id="seconds">00</span><small>Sekundi</small></div>
+      </div>
+      <div class="scroll-indicator" onclick="scrollDown()">↓</div>
+    </div>
+  </section>
+
+  <section id="start" class="timeline-section">
+    <h2 class="section-title">Naš specijalni dan</h2>
+    <div class="timeline-container">
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-heart"></i></div>
+        <div class="timeline-content"><h3>09:00</h3><p>Mladoženja kreće po mladu</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-home"></i></div>
+        <div class="timeline-content"><h3>10:30</h3><p>Dolazak do mlade</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-home"></i></div>
+        <div class="timeline-content"><h3>12:00</h3><p>Polazak od mladine kuće</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-ring"></i></div>
+        <div class="timeline-content"><h3>14:30</h3><p>Općinsko vjenčanje</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-mosque"></i></div>
+        <div class="timeline-content"><h3>15:00</h3><p>Šerijatsko vjenčanje</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-home"></i></div>
+        <div class="timeline-content"><h3>16:00</h3><p>Dolazak do mladoženjine kuće</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-camera"></i></div>
+        <div class="timeline-content"><h3>17:00</h3><p>Fotografisanje mladenaca</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-glass-cheers"></i></div>
+        <div class="timeline-content"><h3>18:00</h3><p>Svadba - Hotel & Spa Vema Visoko</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-glass-cheers"></i></div>
+        <div class="timeline-content"><h3>19:00</h3><p>Dolazak mladenaca u restoran</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map reveal">
+    <h2 class="section-title">Lokacija</h2>
+    <div class="map-wrapper">
+        <!-- <iframe src="https://maps.google.com/maps?q=Vrelo%20Faletići%20Sarajevo&t=k&z=17&ie=UTF8&iwloc=&output=embed&maptype=satellite" allowfullscreen="" loading="lazy"></iframe> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2870.413550241365!2d18.177633998765977!3d43.99217612807348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475f2f9a7e878323%3A0xef5523d154b18ec9!2sHotel%20%26%20Spa%20Vema!5e0!3m2!1sen!2sba!4v1791022222871!5m2!1sen!2sba" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section class="toast-section reveal">
+    <h2 class="section-title">Poruka za mladence</h2>
+    <div class="toast-input-container">
+        <input type="text" id="guestName" placeholder="Vaše ime">
+        <textarea id="guestMessage" placeholder="Napišite želju..."></textarea>
+        <button class="btn-green" onclick="sendToast()">Pošalji čestitku 🥂</button>
+    </div>
+    <div id="toastDisplay"></div>
+  </section>
+
+  <section class="drive reveal">
+    <div class="glass-card">
+        <h2>Podijelite uspomene</h2>
+        <a href="https://photos.app.goo.gl/9HghPnRPKZm2zfE78" class="btn-green" target="_blank">Upload Photos <i class="fas fa-cloud-upload-alt"></i></a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

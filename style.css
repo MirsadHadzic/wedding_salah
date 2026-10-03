@@ -1,0 +1,126 @@
+:root {
+  --accent-green: #236b43;
+  --accent-light: #a9cdb2;
+  --dark: #071b12;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--dark);
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 19px, rgba(79, 130, 91, 0.1) 20px 21px, transparent 22px 40px),
+    repeating-linear-gradient(-45deg, transparent 0 19px, rgba(79, 130, 91, 0.1) 20px 21px, transparent 22px 40px),
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.12) 0 2px, transparent 2px 40px);
+  background-size: 56px 56px, 56px 56px, 56px 56px;
+  color: #fff; 
+  font-family: 'Lato', sans-serif; 
+  line-height: 1.6; 
+  overflow-x: hidden; 
+}
+
+h1, h2, h3, .subtitle { font-family: 'Playfair Display', serif; }
+
+/* Scroll Margin for Arrow Click */
+section {
+  scroll-margin-top: 50px; /* This makes it stop slightly "down" from the top */
+}
+
+/* Back to Top Arrow */
+#backToTop { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--accent-green); color: #fff; border: none; border-radius: 50%; cursor: pointer; display: none; z-index: 1000; transition: 0.3s; font-size: 1.2rem; }
+
+/* Music Controls */
+.music-wrapper { position: fixed; bottom: 30px; left: 30px; display: flex; align-items: center; gap: 10px; cursor: pointer; z-index: 1000; }
+.music-icon { width: 50px; height: 50px; border: 1px solid var(--accent-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.5); color: var(--accent-light); backdrop-filter: blur(5px); }
+
+/* Hero */
+.hero { height: 100vh; position: relative; isolation: isolate; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.52)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2000') center / cover; -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); }
+.hero-content h1 { font-size: 4rem; margin: 10px 0; }
+.hero-content h1 span { color: var(--accent-light); font-style: italic; }
+.subtitle { text-transform: uppercase; letter-spacing: 5px; color: var(--accent-light); }
+
+.scroll-indicator { margin-top: 30px; font-size: 2.5rem; color: var(--accent-light); animation: bounce 2s infinite; cursor: pointer; transition: 0.3s; }
+.scroll-indicator:hover { color: white; transform: scale(1.2); }
+
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
+
+/* Countdown */
+#countdown { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
+.time-box { background: var(--glass); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); padding: 20px; width: 85px; border-radius: 15px; }
+.time-box span { display: block; font-size: 1.5rem; font-weight: bold; color: var(--accent-light); }
+
+/* Timeline */
+.timeline-section { padding: 100px 20px; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--accent-light); }
+.timeline-container { max-width: 800px; margin: 0 auto; position: relative; }
+.timeline-container::before { content: ''; position: absolute; left: 50%; width: 2px; height: 100%; background: var(--glass-border); transform: translateX(-50%); }
+.timeline-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; width: 100%; }
+.timeline-content { width: 45%; background: var(--glass); padding: 20px; border-radius: 15px; border: 1px solid var(--glass-border); }
+.timeline-icon { width: 40px; height: 40px; background: var(--accent-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1; color: #fff; }
+
+/* Map - Satellite View */
+.map-wrapper { max-width: 1000px; margin: 0 auto; padding: 20px; }
+iframe { width: 100%; height: 450px; border-radius: 20px; border: 2px solid var(--accent-green); }
+
+/* Centering the "Last Part" */
+.toast-section, .drive { 
+  padding: 80px 20px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; /* Fixes the left-side shift */
+  text-align: center; 
+}
+
+.toast-input-container { 
+  width: 100%; 
+  max-width: 500px; 
+  margin: 30px auto; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
+}
+
+.toast-input-container input, .toast-input-container textarea { 
+  background: var(--glass); 
+  border: 1px solid var(--glass-border); 
+  padding: 15px; 
+  border-radius: 10px; 
+  color: white; 
+  width: 100%; 
+}
+
+#toastDisplay { margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; width: 100%; }
+.toast-card { background: var(--glass); padding: 20px; border-radius: 15px; width: 280px; border-left: 3px solid var(--accent-green); text-align: left; }
+
+/* Buttons & Glass Cards */
+.glass-card { 
+  background: var(--glass); 
+  backdrop-filter: blur(15px); 
+  border: 1px solid var(--glass-border); 
+  padding: 50px; 
+  width: 100%; 
+  max-width: 600px; 
+  border-radius: 20px; 
+}
+
+.btn-green { display: inline-block; padding: 12px 30px; background: var(--accent-green); color: #fff; text-decoration: none; font-weight: bold; border-radius: 50px; transition: 0.3s; cursor: pointer; border: none; }
+.btn-green:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(35, 107, 67, 0.55); }
+
+/* Reveal Animation */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+  .timeline-container::before { left: 20px; }
+  .timeline-item { flex-direction: column; align-items: flex-start; padding-left: 50px; }
+  .timeline-content { width: 100%; }
+  .timeline-icon { position: absolute; left: 0; }
+  .hero-content h1 { font-size: 3rem; }
+}

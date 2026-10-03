@@ -32,6 +32,33 @@ section {
   scroll-margin-top: 50px; /* This makes it stop slightly "down" from the top */
 }
 
+/* Discreet creator attribution without affecting page layout */
+.brand-link {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 1001;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-size: 0.75rem;
+  text-decoration: none;
+  opacity: 0.42;
+  transition: opacity 0.2s ease;
+}
+
+.brand-link:hover,
+.brand-link:focus-visible {
+  opacity: 0.95;
+}
+
+.brand-link:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 /* Back to Top Arrow */
 #backToTop { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--accent-green); color: #fff; border: none; border-radius: 50%; cursor: pointer; display: none; z-index: 1000; transition: 0.3s; font-size: 1.2rem; }
 

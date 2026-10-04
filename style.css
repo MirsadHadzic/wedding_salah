@@ -15,17 +15,17 @@ html {
 body {
   background-color: var(--dark);
   background-image:
-    repeating-linear-gradient(45deg, transparent 0 19px, rgba(79, 130, 91, 0.1) 20px 21px, transparent 22px 40px),
-    repeating-linear-gradient(-45deg, transparent 0 19px, rgba(79, 130, 91, 0.1) 20px 21px, transparent 22px 40px),
+    repeating-linear-gradient(45deg, transparent 0 19px, rgba(79, 130, 91, 0.1) 20px 21px, rgba(220, 65, 65, 0.55) 22px 23px, transparent 24px 40px),
+    repeating-linear-gradient(-45deg, transparent 0 19px, rgba(79, 130, 91, 0.1) 20px 21px, rgba(220, 65, 65, 0.55) 22px 23px, transparent 24px 40px),
     repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.12) 0 2px, transparent 2px 40px);
   background-size: 56px 56px, 56px 56px, 56px 56px;
   color: #fff; 
-  font-family: 'Lato', sans-serif; 
+  font-family: 'Amiri', serif;
   line-height: 1.6; 
   overflow-x: hidden; 
 }
 
-h1, h2, h3, .subtitle { font-family: 'Playfair Display', serif; }
+h1, h2, h3, .subtitle { font-family: 'Amiri', serif; }
 
 /* Scroll Margin for Arrow Click */
 section {

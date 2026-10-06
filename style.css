@@ -1,6 +1,8 @@
 :root {
   --accent-green: #a92a32;
   --accent-light: #f0d5a0;
+  --hero-main: #E8E4C9;
+  --hero-red: #a92a32;
   --dark: #17120f;
   --glass: rgba(240, 213, 160, 0.05);
   --glass-border: rgba(240, 213, 160, 0.14);
@@ -14,13 +16,10 @@ html {
 
 body {
   background-color: var(--dark);
-  background-image:
-    linear-gradient(rgba(23, 18, 15, 0.82), rgba(23, 18, 15, 0.82)),
-    url("assets/arabic-kilim-medallion.png"),
-    radial-gradient(ellipse at center, rgba(198, 40, 50, 0.08), transparent 72%);
-  background-size: auto, 90px 89px, cover;
-  background-repeat: no-repeat, repeat, no-repeat;
-  background-attachment: fixed, scroll, fixed;
+  background-image: url("assets/dark-bosnian-kilim.png");
+  background-size: 683px 384px;
+  background-repeat: repeat;
+  background-attachment: fixed;
   color: #fff; 
   font-family: 'Aref Ruqaa', serif;
   line-height: 1.6; 
@@ -70,12 +69,14 @@ section {
 
 /* Hero */
 .hero { height: 100vh; position: relative; isolation: isolate; display: flex; align-items: center; justify-content: center; text-align: center; }
-.hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.52)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2000') center / cover; -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); }
-.hero-content h1 { font-size: 4rem; margin: 10px 0; }
-.hero-content h1 span { color: var(--accent-light); font-style: italic; }
-.subtitle { text-transform: uppercase; letter-spacing: 5px; color: var(--accent-light); }
+.hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.32)); -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); }
+.hero-content { max-width: 760px; }
+.hero-content h1 { font-size: 4rem; margin: 10px 0; line-height: 1.08; letter-spacing: 0.02em; color: var(--hero-main); }
+.hero-content h1 span { color: var(--hero-red); font-style: italic; }
+.subtitle { text-transform: uppercase; letter-spacing: 5px; color: var(--hero-red); }
+.date { color: var(--hero-red); }
 
-.scroll-indicator { margin-top: 30px; font-size: 2.5rem; color: var(--accent-light); animation: bounce 2s infinite; cursor: pointer; transition: 0.3s; }
+.scroll-indicator { margin-top: 30px; font-size: 2.5rem; color: var(--hero-red); animation: bounce 2s infinite; cursor: pointer; transition: 0.3s; }
 .scroll-indicator:hover { color: white; transform: scale(1.2); }
 
 @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
@@ -83,11 +84,15 @@ section {
 /* Countdown */
 #countdown { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
 .time-box { background: var(--glass); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); padding: 20px; width: 85px; border-radius: 15px; }
-.time-box span { display: block; font-size: 1.5rem; font-weight: bold; color: var(--accent-light); }
+.time-box span { display: block; font-size: 1.5rem; font-weight: bold; color: var(--hero-red); }
+.time-box small { color: var(--hero-red); }
 
 /* Timeline */
 .timeline-section { padding: 100px 20px; }
-.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--accent-light); }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--hero-main); }
+.map h2, .toast-section h2, .drive h2 {
+  color: var(--hero-main);
+}
 .timeline-container { max-width: 800px; margin: 0 auto; position: relative; }
 .timeline-container::before { content: ''; position: absolute; left: 50%; width: 2px; height: 100%; background: var(--glass-border); transform: translateX(-50%); }
 .timeline-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; width: 100%; }

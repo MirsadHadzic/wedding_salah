@@ -1,9 +1,9 @@
 :root {
-  --accent-green: #236b43;
-  --accent-light: #a9cdb2;
-  --dark: #071b12;
-  --glass: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --accent-green: #a92a32;
+  --accent-light: #f0d5a0;
+  --dark: #17120f;
+  --glass: rgba(240, 213, 160, 0.05);
+  --glass-border: rgba(240, 213, 160, 0.14);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -15,10 +15,12 @@ html {
 body {
   background-color: var(--dark);
   background-image:
-    repeating-linear-gradient(45deg, transparent 0 19px, rgba(79, 130, 91, 0.1) 20px 21px, rgba(180, 65, 65, 0.1) 22px 23px, transparent 24px 40px),
-    repeating-linear-gradient(-45deg, transparent 0 19px, rgba(79, 130, 91, 0.1) 20px 21px, rgba(180, 65, 65, 0.1) 22px 23px, transparent 24px 40px),
-    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.12) 0 2px, transparent 2px 40px);
-  background-size: 56px 56px, 56px 56px, 56px 56px;
+    linear-gradient(rgba(23, 18, 15, 0.82), rgba(23, 18, 15, 0.82)),
+    url("assets/arabic-kilim-medallion.png"),
+    radial-gradient(ellipse at center, rgba(198, 40, 50, 0.08), transparent 72%);
+  background-size: auto, 90px 89px, cover;
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-attachment: fixed, scroll, fixed;
   color: #fff; 
   font-family: 'Aref Ruqaa', serif;
   line-height: 1.6; 

@@ -1,6 +1,7 @@
 :root {
   --accent-green: #a92a32;
   --accent-light: #f0d5a0;
+  --dirty-white: #e8e4c9;
   --hero-main: #E8E4C9;
   --hero-red: #a92a32;
   --dark: #17120f;
@@ -20,7 +21,7 @@ body {
   background-size: 683px 384px;
   background-repeat: repeat;
   background-attachment: fixed;
-  color: #fff; 
+  color: var(--dirty-white);
   font-family: 'Aref Ruqaa', serif;
   line-height: 1.6; 
   overflow-x: hidden; 
@@ -42,7 +43,7 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #fff;
+  color: var(--dirty-white);
   font-size: 0.75rem;
   text-decoration: none;
   opacity: 0.42;
@@ -61,7 +62,7 @@ section {
 }
 
 /* Back to Top Arrow */
-#backToTop { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--accent-green); color: #fff; border: none; border-radius: 50%; cursor: pointer; display: none; z-index: 1000; transition: 0.3s; font-size: 1.2rem; }
+#backToTop { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--accent-green); color: var(--dirty-white); border: none; border-radius: 50%; cursor: pointer; display: none; z-index: 1000; transition: 0.3s; font-size: 1.2rem; }
 
 /* Music Controls */
 .music-wrapper { position: fixed; bottom: 30px; left: 30px; display: flex; align-items: center; gap: 10px; cursor: pointer; z-index: 1000; }
@@ -77,7 +78,7 @@ section {
 .date { color: var(--hero-red); }
 
 .scroll-indicator { margin-top: 30px; font-size: 2.5rem; color: var(--hero-red); animation: bounce 2s infinite; cursor: pointer; transition: 0.3s; }
-.scroll-indicator:hover { color: white; transform: scale(1.2); }
+.scroll-indicator:hover { color: var(--dirty-white); transform: scale(1.2); }
 
 @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
 
@@ -94,10 +95,10 @@ section {
   color: var(--hero-main);
 }
 .timeline-container { max-width: 800px; margin: 0 auto; position: relative; }
-.timeline-container::before { content: ''; position: absolute; left: 50%; width: 2px; height: 100%; background: var(--glass-border); transform: translateX(-50%); }
-.timeline-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; width: 100%; }
-.timeline-content { width: 45%; background: var(--glass); padding: 20px; border-radius: 15px; border: 1px solid var(--glass-border); }
-.timeline-icon { width: 40px; height: 40px; background: var(--accent-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1; color: #fff; }
+.timeline-container::before { content: ''; position: absolute; left: 20px; width: 2px; height: 100%; background: var(--glass-border); }
+.timeline-item { position: relative; display: flex; justify-content: flex-start; align-items: center; margin-bottom: 40px; padding-left: 60px; width: 100%; }
+.timeline-content { width: 100%; background: var(--glass); padding: 20px; border-radius: 15px; border: 1px solid var(--glass-border); }
+.timeline-icon { position: absolute; left: 0; width: 40px; height: 40px; background: var(--accent-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1; color: var(--dirty-white); }
 
 /* Map - Satellite View */
 .map-wrapper { max-width: 1000px; margin: 0 auto; padding: 20px; }
@@ -126,7 +127,7 @@ iframe { width: 100%; height: 450px; border-radius: 20px; border: 2px solid var(
   border: 1px solid var(--glass-border); 
   padding: 15px; 
   border-radius: 10px; 
-  color: white; 
+  color: var(--dirty-white);
   width: 100%; 
 }
 
@@ -144,7 +145,7 @@ iframe { width: 100%; height: 450px; border-radius: 20px; border: 2px solid var(
   border-radius: 20px; 
 }
 
-.btn-green { display: inline-block; padding: 12px 30px; background: var(--accent-green); color: #fff; text-decoration: none; font-weight: bold; border-radius: 50px; transition: 0.3s; cursor: pointer; border: none; }
+.btn-green { display: inline-block; padding: 12px 30px; background: var(--accent-green); color: var(--dirty-white); text-decoration: none; font-weight: bold; border-radius: 50px; transition: 0.3s; cursor: pointer; border: none; }
 .btn-green:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(35, 107, 67, 0.55); }
 
 /* Reveal Animation */
